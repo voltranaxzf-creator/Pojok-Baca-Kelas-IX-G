@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pojok Baca Kelas IX G</title>
+    <style>
+        * {margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; box-sizing: border-box;}
+        body {
+            background: #1a1512;
+            color: #e8dccf;
+            padding: 20px;
+            background-image: radial-gradient(#4a3728 1px, transparent 1px);
+            background-size: 25px 25px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #241d18;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            border: 2px solid #8b5a2b;
+        }
+        h1 {
+            color: #d4a76a;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .sub-jawa {
+            text-align: center;
+            color: #b8926a;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .info {text-align: center; margin-bottom: 30px; color: #c9a67a; font-size: 17px;}
+        .buku-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;}
+        .buku-card {
+            background: #2d241d;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #5a4332;
+            transition: 0.3s;
+        }
+        .buku-card:hover {border-color: #d4a76a; transform: translateY(-3px);}
+        .buku-card h3 {margin: 10px 0; color: #d4a76a; font-size: 16px;}
+        .buku-card p {font-size: 13px; color: #b8926a; margin-bottom: 15px;}
+        .buka-btn {
+            padding: 8px 15px; background: #8b5a2b; color: white;
+            text-decoration: none; border-radius: 5px; font-size: 14px;
+            display: inline-block;
+        }
+        .buka-btn:hover {background: #a06b35;}
+        .kembali {
+            display: block; text-align: center; margin-top: 30px;
+            color: #d4a76a; text-decoration: none; font-weight: 500;
+        }
+        .kembali:hover {text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="sub-jawa">ꦥꦺꦴꦗꦺꦴꦏ꧀ꦧꦕ</p>
+        <h1>📚 POJOK BACA KELAS IX G</h1>
+        <div class="info">Sugeng maca kanthi tenang, <span id="namaSiswa"></span>!</div>
+
+        <div class="buku-grid">
+            <div class="buku-card">
+                <h3>Bahasa Indonesia IX</h3>
+                <p>Buku pelajaran Kurikulum Merdeka</p>
+                <a href="#" class="buka-btn">Wacana Buku</a>
+            </div>
+            <div class="buku-card">
+                <h3>Basa Jawa IX</h3>
+                <p>Materi budaya lan sastra Jawa</p>
+                <a href="#" class="buka-btn">Wacana Buku</a>
+            </div>
+            <div class="buku-card">
+                <h3>Matematika IX</h3>
+                <p>Latihan soal dan materi lengkap</p>
+                <a href="#" class="buka-btn">Wacana Buku</a>
+            </div>
+            <div class="buku-card">
+                <h3>IPA Terpadu IX</h3>
+                <p>Ilmu Pengetahuan Alam</p>
+                <a href="#" class="buka-btn">Wacana Buku</a>
+            </div>
+            <div class="buku-card">
+                <h3>IPS IX</h3>
+                <p>Sejarah, geografi dan ekonomi</p>
+                <a href="#" class="buka-btn">Wacana Buku</a>
+            </div>
+            <div class="buku-card">
+                <h3>PJOK & Seni</h3>
+                <p>Materi olahraga dan kesenian</p>
+                <a href="#" class="buka-btn">Wacana Buku</a>
+            </div>
+        </div>
+
+        <a href="index.html" class="kembali">← Kembali menyang kaca utama</a>
+    </div>
+
+    <script>
+        const sesi = localStorage.getItem('siswaLogin');
+        if(!sesi) {
+            alert('Monggo login rumiyin saged mlebet Pojok Baca!');
+            window.location.href = 'index.html';
+        } else {
+            const data = JSON.parse(sesi);
+            document.getElementById('namaSiswa').textContent = data.nama;
+        }
+    </script>
+</body>
+</html>

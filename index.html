@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kelas IX G</title>
+    <style>
+        * {margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; box-sizing: border-box;}
+        body {
+            background: #1a1512;
+            color: #e8dccf;
+            padding: 20px;
+            background-image: radial-gradient(#4a3728 1px, transparent 1px);
+            background-size: 25px 25px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #241d18;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            border: 2px solid #8b5a2b;
+        }
+        h1 {
+            color: #d4a76a;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .sub-jawa {
+            text-align: center;
+            color: #b8926a;
+            font-style: italic;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+        .kelas-info {
+            text-align: center;
+            color: #c9a67a;
+            margin-bottom: 15px;
+            font-size: 17px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #8b5a2b;
+        }
+        .wali-kelas {
+            text-align: center;
+            color: #b8926a;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+        .grid {display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0;}
+        @media(max-width:900px) {.grid {grid-template-columns: 1fr;}}
+        .card {
+            background: #2d241d;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #d4a76a;
+        }
+        .card h2 {
+            color: #d4a76a;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #8b5a2b;
+            padding-bottom: 8px;
+        }
+        .siswa-list li {
+            list-style: none;
+            padding: 6px 0;
+            border-bottom: 1px solid #3a2f26;
+            color: #e8dccf;
+            font-size: 14px;
+        }
+        .siswa-list li:before {
+            content: "ꦿ ";
+            color: #d4a76a;
+            margin-right: 8px;
+        }
+        form label {display: block; margin: 10px 0 5px; font-weight: 500; color: #c9a67a;}
+        form input {
+            width: 100%; padding: 10px;
+            border: 1px solid #5a4332;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            background: #1a1512;
+            color: #e8dccf;
+        }
+        form input:focus {outline: none; border-color: #d4a76a;}
+        button {
+            width: 100%; padding: 12px;
+            background: #8b5a2b;
+            color: white;
+            border: none; border-radius: 6px;
+            font-size: 16px; cursor: pointer; margin-top: 5px;
+            transition: 0.3s;
+        }
+        button:hover {background: #a06b35; transform: translateY(-1px);}
+        .btn-daftar {background: #4a3728; margin-top: 8px;}
+        .btn-daftar:hover {background: #5c4533;}
+        .pesan {margin-top: 10px; text-align: center; font-size: 14px;}
+        .error {color: #ff8a80;}
+        .sukses {color: #81c784;}
+        .buku-link {
+            display: block; text-align: center; margin-top: 20px; padding: 12px;
+            background: #9c663d; color: white; text-decoration: none;
+            border-radius: 6px; font-weight: 500;
+        }
+        .buku-link:hover {background: #b3784a;}
+        .hidden {display: none;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="sub-jawa">ꦧꦼꦏ꧀ꦗꦼꦤ꧀ꦠꦼꦁ ꦲꦶꦏ꧀ꦭꦱ꧀ꦠꦼꦫ</p>
+        <h1>SELAMAT DATANG DI RUANG KELAS</h1>
+        <div class="kelas-info">Kelas: <strong>IX G</strong> | Tahun Ajaran 2026/2027</div>
+        <div class="wali-kelas">Wali Kelas: <strong>Taufik Sapta Prasetya, S.Pd</strong> | Jumlah Siswa: 30 orang</div>
+
+        <div class="grid">
+            <!-- Daftar Warga Kelas (Hanya No Absen + Nama) -->
+            <div class="card">
+                <h2>Daftar Warga Kelas IX G</h2>
+                <ul class="siswa-list">
+                    <li>1. Adelia Zara Faeyza</li>
+                    <li>2. Afika Nuri Kharisma</li>
+                    <li>3. Arjun Eka Saputra</li>
+                    <li>4. Citra Wening Kinanti</li>
+                    <li>5. Demas Arsono</li>
+                    <li>6. Diana Nur Saputri</li>
+                    <li>7. Evita Dwi Cahyani</li>
+                    <li>8. Fadlan Rehan Nur Safril</li>
+                    <li>9. Fahri Nur Romadon</li>
+                    <li>10. Fajri Evan Mubaroq</li>
+                    <li>11. Fatkhul Muzamil</li>
+                    <li>12. Friska Cahyaningrum</li>
+                    <li>13. Hilmi Ammar Faiz</li>
+                    <li>14. Ikhtiar Nurhidayat</li>
+                    <li>15. Isnaenah</li>
+                    <li>16. Juone Risq Sabastian</li>
+                    <li>17. Minhatutsnaini Muzhiroh</li>
+                    <li>18. Muhamad Kurniawan</li>
+                    <li>19. Nabila Septiani Solichah</li>
+                    <li>20. Naira Aulia Putri</li>
+                    <li>21. Nikeisha Raffi Ufaira</li>
+                    <li>22. Nindya Candraningtyas Santosa</li>
+                    <li>23. Octa Sintya</li>
+                    <li>24. Prakasa Rizqian Dinova</li>
+                    <li>25. Rendy Pratama</li>
+                    <li>26. Sakti Adji Nusantoro</li>
+                    <li>27. Septian Tegar Saputra</li>
+                    <li>28. Sindi Dwi Arini</li>
+                    <li>29. Syalwa Az Zahra</li>
+                    <li>30. Titan Khansa Zakilla</li>
+                </ul>
+            </div>
+
+            <!-- Form Login & Daftar -->
+            <div class="card">
+                <div id="formLogin">
+                    <h2>Akses Pojok Baca</h2>
+                    <p style="margin-bottom:15px; font-size:14px; color:#b8926a;">Masukkan NIS dan sandi yang sudah didaftarkan</p>
+                    <form id="loginForm">
+                        <label>NIS (Nomor Induk Siswa)</label>
+                        <input type="text" id="nisLogin" placeholder="Contoh: 9706" required>
+                        
+                        <label>Kata Sandi</label>
+                        <input type="password" id="passLogin" placeholder="Masukkan sandi" required>
+                        
+                        <button type="submit">Masuk / Login</button>
+                        <div class="pesan" id="pesanLogin"></div>
+                    </form>
+                    <button class="btn-daftar" onclick="tampilDaftar()">Belum punya akun? Daftar Dulu</button>
+                </div>
+
+                <div id="formDaftar" class="hidden">
+                    <h2>Daftar Akun Baru</h2>
+                    <form id="daftarForm">
+                        <label>Nama Lengkap Sesuai Kelas</label>
+                        <input type="text" id="namaDaftar" placeholder="Contoh: Adelia Zara Faeyza" required>
+                        
+                        <label>NIS (Nomor Induk Siswa)</label>
+                        <input type="text" id="nisDaftar" placeholder="Contoh: 9706" required>
+                        
+                        <label>Buat Kata Sandi</label>
+                        <input type="password" id="passDaftar" placeholder="Minimal 6 karakter" required>
+                        
+                        <button type="submit">Simpan Akun</button>
+                        <div class="pesan" id="pesanDaftar"></div>
+                    </form>
+                    <button class="btn-daftar" onclick="tampilLogin()">Sudah punya akun? Masuk</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="sudahMasuk" class="hidden">
+            <a href="pojokbaca.html" class="buku-link">📚 BUKA POJOK BACA</a>
+            <button style="background:#7a4428; margin-top:10px;" onclick="keluarAkun()">Keluar / Logout</button>
+        </div>
+    </div>
+
+    <script>
+        function cekLogin() {
+            const sesi = localStorage.getItem('siswaLogin');
+            if(sesi) {
+                document.getElementById('formLogin').classList.add('hidden');
+                document.getElementById('formDaftar').classList.add('hidden');
+                document.getElementById('sudahMasuk').classList.remove('hidden');
+            }
+        }
+        function tampilDaftar() {
+            document.getElementById('formLogin').classList.add('hidden');
+            document.getElementById('formDaftar').classList.remove('hidden');
+        }
+        function tampilLogin() {
+            document.getElementById('formDaftar').classList.add('hidden');
+            document.getElementById('formLogin').classList.remove('hidden');
+        }
+        document.getElementById('daftarForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nama = document.getElementById('namaDaftar').value.trim();
+            const nis = document.getElementById('nisDaftar').value.trim();
+            const sandi = document.getElementById('passDaftar').value.trim();
+            const pesan = document.getElementById('pesanDaftar');
+
+            if(sandi.length < 6) {
+                pesan.innerHTML = '<span class="error">Sandi minimal 6 karakter!</span>';
+                return;
+            }
+            let dataSiswa = JSON.parse(localStorage.getItem('dataSiswa') || '[]');
+            if(dataSiswa.find(s => s.nis === nis)) {
+                pesan.innerHTML = '<span class="error">NIS ini sudah terdaftar!</span>';
+                return;
+            }
+            dataSiswa.push({nama, nis, sandi});
+            localStorage.setItem('dataSiswa', JSON.stringify(dataSiswa));
+            pesan.innerHTML = '<span class="sukses">Daftar berhasil! Monggo login.</span>';
+            this.reset();
+            setTimeout(tampilLogin, 1500);
+        });
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nis = document.getElementById('nisLogin').value.trim();
+            const sandi = document.getElementById('passLogin').value.trim();
+            const pesan = document.getElementById('pesanLogin');
+
+            let dataSiswa = JSON.parse(localStorage.getItem('dataSiswa') || '[]');
+            const siswaValid = dataSiswa.find(s => s.nis === nis && s.sandi === sandi);
+
+            if(siswaValid) {
+                localStorage.setItem('siswaLogin', JSON.stringify(siswaValid));
+                pesan.innerHTML = '<span class="sukses">Sugeng rawuh!</span>';
+                cekLogin();
+            } else {
+                pesan.innerHTML = '<span class="error">NIS utawa sandi salah!</span>';
+            }
+        });
+        function keluarAkun() {
+            localStorage.removeItem('siswaLogin');
+            location.reload();
+        }
+        cekLogin();
+    </script>
+</body>
+</html>
